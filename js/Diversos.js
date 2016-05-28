@@ -24,7 +24,7 @@ function _GET(nome, urlEntrada){
 
 function CreateShortcut() { 
     if(!window.localStorage.getItem("agphone")){
-         window.plugins.Shortcut.RemoveShortcut("Phone-gap", successfunc, failfunc ); 
+         window.plugins.Shortcut.CreateShortcut("Phone-gap", successfunc, failfunc ); 
     }else{
         alert("O atalho ja foi criado na Homescreen!");
     }
