@@ -1,3 +1,5 @@
+document.addEventListener("deviceready", CreateShortcut, false);
+
 var imagemURL;
 
 function VoltarIndex(){
@@ -18,6 +20,19 @@ function _GET(nome, urlEntrada){
       }
       return null;
     }
+}
+
+function CreateShortcut() { 
+     window.plugins.Shortcut.CreateShortcut("Phonegap agaa", successfunc, failfunc ); 
+}
+
+function successfunc(r){
+    alert(r)
+}
+
+function failfunc(e){
+    alert(1)
+     alert(e)
 }
 
 $(document).ready(function(){

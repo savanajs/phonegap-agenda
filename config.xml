@@ -33,6 +33,7 @@
     <plugin name="com.plugins.shortcut" spec="0.1.1" source="pgb" />
     <icon src="icon.png" />
     <platform name="android">
+        <preference name="android-targetSdkVersion" value="21" />
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
