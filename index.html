@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agenda Phonegap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="spec/lib/jquery-mobile/themes/green.min.css" />
+    <link rel="stylesheet" href="spec/lib/jquery-mobile/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <style>#img img, .img img{ width: 100%; height: auto;}</style>
+</head>
+
+<body>
+    <script src="js/ShortcutPlugin.js"></script>
+    <script>
+    window.plugins.Shortcut.CreateShortcut("Agenda Phonegap", successfunc, failfunc );
+    </script>
+    <!-- Arquivos do projeto -->
+    <script src="js/Diversos.js"></script>
+    <!-- Funções comuns do sistema -->
+    <script src="js/Controller.js"></script>
+    <!-- Funções chamandas pelos elementos HTML -->
+    <script src="js/Model.js"></script>
+    <!-- Funções quem interagens com o BD -->
+    <!-- Iniciar a página #lista -->
+    <div data-role="page" id="lista">
+        <div data-role="header">
+            <h1>Diário</h1>
+            <a href="#criar" onclick="" data-icon="plus" data-theme="b">Criar1</a>
+        </div>
+        <div data-role="content">
+            <ul id="listaAnotacoes" data-role="listview">
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="criar" data-theme="b">
+
+        <div data-role="header">
+        <a href="#lista" data-direction="reverse" data-icon="back">Voltar</a>
+        <h1>Criar Anotação</h1>
+        <a href="#" onclick="gravarAnotacao()" data-icon="check" data-theme="b">Criar</a>
+        </div>
+
+        <div data-role="content" data-theme="a">
+        <h2>Prencha os dados</h2>
+        <label for="titulo">Título:</label>
+        <input type="text" name="name" id="titulo" />
+
+        <label for="conteudo">Conteúdo:</label>
+        <textarea name="conteudo" id="conteudo" ></textarea>
+
+        <span id="img"></span>
+
+        <button onclick="capturarImagem()" data-role="button" data-theme="d">Capturar Imagem</button>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="visualizar" >
+
+        <div data-role="header">
+        <h1>Visualizar</h1>
+        <a href="#lista" data-direction="reverse" data-role="button" data-theme="b" data-icon="back">Voltar</a>
+        </div>
+
+        <div data-role="content" >
+        <div id="detalhesAnotacao"></div>
+        </div>
+
+    </div>
+
+</html>
