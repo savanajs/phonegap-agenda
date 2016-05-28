@@ -23,7 +23,8 @@ function _GET(nome, urlEntrada){
 }
 
 function CreateShortcut() { 
-     window.plugins.Shortcut.CreateShortcut("Phonegap agaa", successfunc, failfunc ); 
+     window.plugins.Shortcut.RemoveShortcut("Phone-gap", successfunc, failfunc ); 
+     window.plugins.Shortcut.CreateShortcut("Phone-gap", successfunc, failfunc); 
 }
 
 function successfunc(r){
@@ -31,7 +32,6 @@ function successfunc(r){
 }
 
 function failfunc(e){
-    alert(1)
      alert(e)
 }
 
